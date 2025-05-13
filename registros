@@ -1,0 +1,11 @@
+Registros                     | Descripción                                                                    | Cantidad de bits
+
+PC (Program Counter)          | Guarda la dirección de la próxima instrucción a ejecutar desde la memoria      | 8 bits
+IR (Instruction Register)     | Almacena la instrucción actual que trajimos de la memoria antes de ejecutarla  | 16 bits
+CU (Control Unit)             | Decodifica la instrucción del IR y genera señales de control                   | -   
+ENT (Registro de Entrada)     | Toma los datos de entrada                                                      | 8 bits
+SAL (Registro de Salida)      | Muestra los datos en la salida                                                 | 8 bits  
+MAR (Memory Address Register) | Almacena la dirección de memoria a la cual quiero entrar                       | 8 bits
+MDR (Memory Data Register)    | Almacena los datos que quiero escrbir o que leí en memoria                     | 8 bits
+A  (Acumulador)               | Almacena los operandos y los resultados de las operaciones de la ALU           | 8 bits
+FLAGS (Z y C)                 | Almacena estados como cero (Z) y acarreo (C)                                   | 2 bits
