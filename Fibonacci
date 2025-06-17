@@ -1,0 +1,34 @@
+//a = 0
+li $s0 
+store $s0 
+//b = 1
+li $s1
+store $s1
+//i = 2
+li $s3
+store $s3
+//límite = 14
+li $s4
+store $s4
+//incremento = 1
+li $s5
+store $s5
+//bucle
+loop:
+load $s0      // A = a
+add $s1       // A = a + b
+store $s2     // c = a + b
+load $s1      // A = b
+store $s0     // a = b
+load $s2      // A = c
+store $s1     // b = c
+load $s3      // A = i
+add $s5       // A = A + 1 (i++)
+store $s3     // i = i + 1
+// Comparar i y límite
+load $s3      // A = i
+sub $s4       // A = i - 14
+jz end        // si A == 0 → i == 14 → fin
+jmp loop
+end:
+jmp end
